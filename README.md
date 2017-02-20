@@ -1,5 +1,6 @@
 ### 将clojure代码编译为python代码
 #### 打开你的天赋 
+* 像Emacs解释Python一样,用python-mode
 * 解释器和编译器的数学模型是来源SICP: eval/apply递归 + lambda演算 = 解释器/编译器
 * 参照[王垠的博客](http://www.yinwang.org/blog-cn/2012/08/01/interpreter),在解释自身(输入的clojure代码)的过程,同时将Python的目标语言的log打印出来,完成转换 (如clj->js,先解释输入的clojure自身,然后将clojure解释编辑转为js目标语言)
 * 参照[cl-python](https://common-lisp.net/project/clpython/)
