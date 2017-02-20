@@ -4,7 +4,7 @@
   (lambda (exp)
     (match exp                                ; 分支匹配：表达式的两种情况
       [(? number? x) x]                       ; 是数字，直接返回
-      [`(,op ,e1 ,e2)                         ; 匹配提取操作符op和两个操作数e1,e2
+      [`(,op ,e1 ,e2)                         ; 匹配提取操作符op和两个操作数e1,e2 => 模式匹配转换
        (let ([v1 (calc e1)]                   ; 递归调用 calc 自己，得到 e1 的值
              [v2 (calc e2)])                  ; 递归调用 calc 自己，得到 e2 的值
          (match op                            ; 分支匹配：操作符 op 的 4 种情况
